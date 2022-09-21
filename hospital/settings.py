@@ -67,7 +67,9 @@ REST_FRAMEWORK = {
             'DEFAULT_AUTHENTICATION_CLASSES': (
                 'rest_framework_simplejwt.authentication.JWTAuthentication',
             )
-            }
+}
+AUTH_USER_MODEL = 'HospitalApp.User'
+
 
 ROOT_URLCONF = 'hospital.urls'
 
@@ -96,10 +98,10 @@ WSGI_APPLICATION = 'hospital.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'des3nu0nmcnag8',
-        'USER': 'cbarjqmlkjmeuk',
-        'PASSWORD': '318c85ab1600b89fd524e42ea25f4b6d747c5f976ff64367ee3d666be33a6747',
-        'HOST': 'ec2-34-199-68-114.compute-1.amazonaws.com',
+        'NAME': 'ddtitbuqtue5ks',
+        'USER': 'lkqecgygigfifj',
+        'PASSWORD': '70677e7ade46974a71e4f9ccf5629067f1c873a9a246bbe635465177beca4069',
+        'HOST': 'ec2-44-207-253-50.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
