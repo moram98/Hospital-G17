@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
+    'rest_framework',
+    'HospitalApp',
 ]
 SIMPLE_JWT = {
         'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
@@ -47,7 +48,7 @@ SIMPLE_JWT = {
         'BLACKLIST_AFTER_ROTATION': True,
         'UPDATE_LAST_LOGIN': False,
         'ALGORITHM': 'HS256',
-        'USER_ID_FIELD': 'id',
+        'USER_ID_FIELD': 'username',
         'USER_ID_CLAIM': 'user_id',
 }
 
@@ -68,7 +69,7 @@ REST_FRAMEWORK = {
                 'rest_framework_simplejwt.authentication.JWTAuthentication',
             )
 }
-AUTH_USER_MODEL = 'HospitalApp.User'
+AUTH_USER_MODEL = 'HospitalApp.Usuario'
 
 
 ROOT_URLCONF = 'hospital.urls'
@@ -98,10 +99,10 @@ WSGI_APPLICATION = 'hospital.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ddtitbuqtue5ks',
-        'USER': 'lkqecgygigfifj',
-        'PASSWORD': '70677e7ade46974a71e4f9ccf5629067f1c873a9a246bbe635465177beca4069',
-        'HOST': 'ec2-44-207-253-50.compute-1.amazonaws.com',
+        'NAME': 'dk23dn8st4712',
+        'USER': 'oyahrwagpsituo',
+        'PASSWORD': '086396a49a906e1e1cf2bbbe5f0a0b79786cb2ed9258f144accfa80e8104c6ab',
+        'HOST': 'ec2-34-231-221-151.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
